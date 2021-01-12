@@ -1,14 +1,14 @@
 # etch-a-sketch
 
-Skills demonstrated
+#skills demonstrated 
 
-    - Vanilla Javascript
-        - DOM Manipulation
-        - for loop
-        - event listeners
-        - forEach method
-    
-Next Features to implement
+* vanilla javascript
+    * DOM manipulation
+    * event listeners
+    * for loop
+    * forEach method
+* CSS grid layout
 
-    - customise grid size
-    - mobile compatibility
+# Next features to implement
+* customise grid size with button
+* moile compatibility
