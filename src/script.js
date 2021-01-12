@@ -13,8 +13,7 @@ newGridSizeButton.textContent = 'new size';
 
 buttonContainer.appendChild(newGridSizeButton);
 buttonContainer.appendChild(clearButton);
-
-
+newGridSizeButton.disabled = true;
 
 
 const appendGrid = (gridSize) => {
