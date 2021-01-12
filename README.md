@@ -2,13 +2,13 @@
 
 Skills demonstrated
 
-    Vannilla Javascript
-        DOM Manipulation
-        for loop
-        event listeners
-        forEach method
+    - Vanilla Javascript
+        - DOM Manipulation
+        - for loop
+        - event listeners
+        - forEach method
     
 Next Features to implement
 
-    customise grid size
-    mobile compatibility
+    - customise grid size
+    - mobile compatibility
