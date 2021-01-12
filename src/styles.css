@@ -1,0 +1,33 @@
+.button-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.clear-button, .new-grid-size-button {
+    border: 2px solid black;
+    margin: 20px;
+    font-family: monospace;
+    padding: 10px;
+    font-size: 16px;
+    font-style: bold;
+}
+
+.new-grid-size-button {
+    background: black;
+    color: white;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    /* width: 50%; */
+    margin: 0px auto;
+    min-height: 75vmin;
+    max-width: 45vmax;
+}
+
+.pixel {
+    border: 1px solid rgb(46, 46, 46);
+}
