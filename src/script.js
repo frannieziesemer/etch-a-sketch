@@ -1,5 +1,6 @@
 const buttonContainer = document.querySelector('.button-container');
 const gridWrapper = document.querySelector('.grid-wrapper');
+let gridSize;
 
 //append buttons
 const clearButton = document.createElement('button');
@@ -14,14 +15,16 @@ buttonContainer.appendChild(newGridSizeButton);
 buttonContainer.appendChild(clearButton);
 
 
-const appendGrid = () => {
-    for(let i = 0; i < 256; i++) {
+
+
+const appendGrid = (gridSize) => {
+    for(let i = 0; i < gridSize; i++) {
         const div = document.createElement('div');
         div.classList.add('pixel');
         gridWrapper.appendChild(div);
     }
 }
-appendGrid();
+appendGrid(256);
 
 const pixels = document.querySelectorAll('.pixel');
 const drawLineOnHover = () => {
@@ -40,8 +43,16 @@ const clearGrid = () => {
     });
 }
 
-clearButton.addEventListener('click', clearGrid);
+//click button 
+// ask for size
+//append grid bases on size 
+const resizeGrid = () => {
+    let size = prompt('Pick a size (width of 100 or less):');
+    appendGrid(size);
+}
 
+clearButton.addEventListener('click', clearGrid);
+newGridSizeButton.addEventListener('click', resizeGrid);
 
 
 
