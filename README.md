@@ -9,6 +9,7 @@
     * forEach method
 * CSS grid layout
 
-# Next features to implement
+### Next features to implement
 * mobile compatibility
+* screen grab feature
 * gradient of hover colour
