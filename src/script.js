@@ -30,8 +30,7 @@ const appendGrid = (gridSize) => {
     }
     gridWrapper.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridWrapper.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
-
-    
+ 
 }
 
 const clearGrid = () => {
