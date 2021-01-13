@@ -2,6 +2,7 @@ const buttonContainer = document.querySelector('.button-container');
 const gridWrapper = document.querySelector('.grid-wrapper');
 let gridSize;
 
+
 //append buttons
 const clearButton = document.createElement('button');
 clearButton.classList.add('clear-button');
@@ -22,36 +23,35 @@ const appendGrid = (gridSize) => {
     for(let i = 0; i < numberOfPixels; i++) {
         const div = document.createElement('div');
         div.classList.add('pixel');
+        div.addEventListener('mouseover', (event) => {
+            event.target.style.background = 'black';
+        })
         gridWrapper.appendChild(div);
     }
     gridWrapper.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     gridWrapper.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
+    
 }
-appendGrid(16);
 
-const pixels = document.querySelectorAll('.pixel');
-//console.log(pixels);
 const clearGrid = () => {
+    let pixels = document.querySelectorAll('.pixel');
+    console.log(pixels);
     pixels.forEach((pixel) => {
-            pixel.style.background = 'white';
+        pixel.style.background = "white"
     });
 }
 
 const resizeGrid = () => {
     let size = prompt('Pick a size (width of 100 or less):');
-    gridWrapper.innerHTML = ' ';
+    gridWrapper.innerHTML = '';
     if (size < 101) { 
         appendGrid(size);
     } 
 }
 
 
-pixels.forEach((pixel) => {
-    pixel.addEventListener('mouseover', (event) => {
-        event.target.style.background = 'black';
-    })
-})
+window.addEventListener('load', appendGrid(16));
 clearButton.addEventListener('click', clearGrid);
 newGridSizeButton.addEventListener('click', resizeGrid);
 

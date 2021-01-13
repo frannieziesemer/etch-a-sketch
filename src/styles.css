@@ -58,10 +58,14 @@
     grid-template-rows: repeat(16, 1fr);
     width: 50%; */
     margin: 0px auto;
-    min-height: 75vmin;
-    max-width: 45vmax;
+    height: 400px;
+    width: 400px;
+    /* min-height: 75vmin;
+    max-width: 45vmax; */
+    border: 4px solid rgb(46, 46, 46);
+
 }
 
 .pixel {
-    border: 1px solid rgb(46, 46, 46);
+    border: 1px solid rgb(46, 46, 46, 0.03);
 }
