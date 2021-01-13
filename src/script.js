@@ -13,43 +13,45 @@ newGridSizeButton.textContent = 'new size';
 
 buttonContainer.appendChild(newGridSizeButton);
 buttonContainer.appendChild(clearButton);
-newGridSizeButton.disabled = true;
+newGridSizeButton.disabled = false;
+
 
 
 const appendGrid = (gridSize) => {
-    for(let i = 0; i < gridSize; i++) {
+    let numberOfPixels = Math.pow(gridSize, 2);
+    for(let i = 0; i < numberOfPixels; i++) {
         const div = document.createElement('div');
         div.classList.add('pixel');
         gridWrapper.appendChild(div);
     }
+    gridWrapper.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+    gridWrapper.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
+
 }
-appendGrid(256);
+appendGrid(16);
 
 const pixels = document.querySelectorAll('.pixel');
-const drawLineOnHover = () => {
-    pixels.forEach((pixel) => {
-        pixel.addEventListener('mouseover', (event) => {
-            pixel.style.background = 'black';
-        })
-    });
-}
-drawLineOnHover();
-
-
+//console.log(pixels);
 const clearGrid = () => {
     pixels.forEach((pixel) => {
             pixel.style.background = 'white';
     });
 }
 
-//click button 
-// ask for size
-//append grid bases on size 
 const resizeGrid = () => {
     let size = prompt('Pick a size (width of 100 or less):');
-    appendGrid(size);
+    gridWrapper.innerHTML = ' ';
+    if (size < 101) { 
+        appendGrid(size);
+    } 
 }
 
+
+pixels.forEach((pixel) => {
+    pixel.addEventListener('mouseover', (event) => {
+        event.target.style.background = 'black';
+    })
+})
 clearButton.addEventListener('click', clearGrid);
 newGridSizeButton.addEventListener('click', resizeGrid);
 

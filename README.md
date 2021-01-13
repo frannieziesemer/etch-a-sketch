@@ -1,6 +1,6 @@
 # etch-a-sketch
 
-#skills demonstrated 
+# skills demonstrated 
 
 * vanilla javascript
     * DOM manipulation
@@ -10,5 +10,5 @@
 * CSS grid layout
 
 # Next features to implement
-* customise grid size with button
-* moile compatibility
+* mobile compatibility
+* gradient of hover colour
