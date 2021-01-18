@@ -1,6 +1,6 @@
 # etch-a-sketch
 
-# skills demonstrated 
+### skills demonstrated 
 
 * vanilla javascript
     * DOM manipulation
