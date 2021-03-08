@@ -1,4 +1,6 @@
-# etch-a-sketch
+## etch-a-sketch
+A small project completed as part of The Odin Project JavaScript Full Stack Track. The overall aim of the project is to learn and practice JavaScript Fundamentals. 
+
 
 ### skills demonstrated 
 
